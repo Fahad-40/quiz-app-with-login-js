@@ -30,8 +30,8 @@ The app includes **user authentication (Sign Up & Login)**, a **timed quiz**, sc
 
 
 quiz-app-with-login-js/
-``
-│
+
+│`
 ├── login.html
 ├── signup.html
 ├── dashboard.html
@@ -42,5 +42,20 @@ quiz-app-with-login-js/
 ├── script.js
 ├── dashboard.js
 │
-└── README.md``
+└── README.md
+`
+---
 
+## 🧠 Learning Outcomes
+
+This project helped practice the following concepts:
+
+- DOM manipulation
+- Event handling
+- Timers (`setInterval`)
+- Conditional logic
+- UI state management
+- Browser storage (`localStorage`)
+- Simple authentication logic
+
+---
