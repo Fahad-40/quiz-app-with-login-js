@@ -17,3 +17,11 @@ The app includes **user authentication (Sign Up & Login)**, a **timed quiz**, sc
 - 🚪 Logout system with session protection
 
 ---
+
+## 🛠️ Technologies Used
+
+- **HTML5** – Structure  
+- **CSS3** – Styling & UI animations  
+- **JavaScript (Vanilla)** – Logic, DOM manipulation, timers, localStorage  
+
+---
