@@ -30,8 +30,8 @@ The app includes **user authentication (Sign Up & Login)**, a **timed quiz**, sc
 
 
 quiz-app-with-login-js/
-`
-│
+
+`│
 ├── login.html
 ├── signup.html
 ├── dashboard.html
