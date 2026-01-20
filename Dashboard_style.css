@@ -1,0 +1,299 @@
+/* ===== Body ===== */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;  
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+/* Welcome Screen */
+.welcome-screen {
+    width: 450px;
+    margin: 70px auto;
+    background: #ffffff;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    padding: 30px;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.welcome-title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.welcome-text {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.start-btn {
+    padding: 12px 20px;
+    font-size: 18px;
+    background: #4A90E2;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.start-btn:hover {
+    transform: translateY(-2px);
+    background: #357ABD;
+}
+/* ===== log out button ===== */
+.quiz-header {
+    width: 96%;
+    padding: 15px 25px;
+    background: #ffffff;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.quiz-header .logo {
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+}
+
+.logout-btn {
+    padding: 8px 16px;
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.logout-btn:hover {
+    background: #e33c3c;
+}
+
+/* ===== Quiz Container ===== */
+.quiz-container {
+    background-color: #ffffff; 
+    width: 450px;
+    border-radius: 20px;
+    padding: 30px 40px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-left: 30%;
+    margin-top: 5%;
+}
+
+.quiz-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== header ===== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.topic {
+    font-size: 16px;
+    font-weight: 600;
+    color: #555;
+}
+
+.timer {
+    font-size: 16px;
+    font-weight: 500;
+    color: #555;
+}
+
+/* ===== Timer ===== */
+/* .timer {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #555;
+} */
+
+/* ===== Progress ===== */
+.progress {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #555;
+    font-weight: 500;
+}
+
+/* ===== Question ===== */
+.question {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 25px;
+ text-align: left;
+}
+
+
+/* ===== Options ===== */
+.options button {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    background-color: #f9f9f9;
+    color: #333;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.options button:hover {
+    transform: translateY(-2px);
+    background-color: #e6e6e6;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+/* ===== Result / Score ===== */
+.result {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 20px 0;
+    display: none; 
+    color: #333;
+}
+
+/* ===== Restart Button ===== */
+.restart-btn {
+    padding: 14px 28px;
+    font-size: 16px;
+    border: none;
+    border-radius: 12px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    display: none; 
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.restart-btn:hover {
+    transform: translateY(-2px);
+    background-color: #45a049;
+}
+
+/* ===== Smooth fade-in for question & options ===== */
+.quiz-container .question,
+.quiz-container .options button {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.4s forwards;
+    animation-delay: 0.1s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== Submit Button ===== */
+.submit-btn {
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 12px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: block;
+    width: 100%;
+}
+
+.submit-btn:disabled {
+    background-color: #a5d6a7;
+    cursor: not-allowed;
+}
+
+.submit-btn:hover:enabled {
+    transform: translateY(-2px);
+    background-color: #45a049;
+}
+
+
+/* ===== Score screen ===== */
+
+.result-screen {
+    width: 450px;
+    margin: 50px auto;
+    background: #ffffff;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+    padding: 30px;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.result-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.result-text {
+    font-size: 18px;
+    color: #333;
+}
+
+.result {
+    font-size: 40px;
+    font-weight: bold;
+    color: #ff9800; 
+    margin: 15px 0;
+    background: #fdf2e9;
+    padding: 15px 25px;
+    border-radius: 12px;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.05);
+}
+
+.motivational-text {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.restart-btn {
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 12px;
+    background-color: #4A90E2;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.restart-btn:hover {
+    transform: translateY(-2px);
+    background-color: #357ABD;
+}

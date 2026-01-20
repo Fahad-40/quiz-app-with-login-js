@@ -1,0 +1,123 @@
+/* ---------- Global Styles ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+html, body {
+  height: 100%;
+  background: linear-gradient(135deg, #eef2ff, #ffffff);
+  color: #111827;
+}
+
+/* ---------- Centered Card ---------- */
+.container {
+  width: 92%;
+  max-width: 420px;
+  margin: 8vh auto;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+  padding: 32px;
+  border: 1px solid rgba(0,0,0,0.05);
+  animation: fadeIn 0.4s ease;
+}
+
+/* ---------- Heading ---------- */
+.logHeading {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 14px;
+  color: #1e293b;
+  text-align: center;
+}
+
+/* ---------- Form Grid ---------- */
+.conatianer2 {
+  display: grid;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+/* ---------- Labels ---------- */
+label {
+  font-size: 0.9rem;
+  color: #475569;
+  font-weight: 600;
+}
+
+/* ---------- Inputs ---------- */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.15);
+  background: #f8fafc;
+  outline: none;
+  font-size: 0.95rem;
+  transition: 0.2s ease;
+}
+
+input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.20);
+}
+
+/* ---------- Buttons ---------- */
+button {
+  cursor: pointer;
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  background: linear-gradient(90deg,#2563eb,#3b82f6);
+  color: white;
+  box-shadow: 0 8px 20px rgba(37,99,235,0.25);
+  transition: 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+button:active {
+  transform: translateY(0);
+}
+
+/* ---------- Message Box ---------- */
+/* #msg {
+  
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+} */
+
+/* ---------- Footer Text ---------- */
+.container p {
+  margin-top: 12px;
+  font-size: 0.92rem;
+  text-align: center;
+  color: #475569;
+}
+.container a {
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+}
+.container a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Animation ---------- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
