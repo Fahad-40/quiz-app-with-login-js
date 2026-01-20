@@ -28,7 +28,7 @@ The app includes **user authentication (Sign Up & Login)**, a **timed quiz**, sc
 
 ## 📂 Project Structure
 
-quiz-app-with-login-js/
+`quiz-app-with-login-js/
 │
 ├── login.html
 ├── signup.html
@@ -40,4 +40,4 @@ quiz-app-with-login-js/
 ├── script.js
 ├── dashboard.js
 │
-└── README.md
+└── README.md`
