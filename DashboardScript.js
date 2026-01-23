@@ -1,33 +1,81 @@
 if (localStorage.getItem("isloggedIn") !== "true") {
-    window.location.href = "logIn.html"
+    window.location.href = "index.html"
 }
 const quizData = [
     {
-        question: "What is the capital of France?",
-        options: ["Berlin", "Madrid", "Paris", "Lisbon"],
-        answer: "Paris"
+        topic: "Geography",
+        question: "Which country has the largest population in the world?",
+        options: ["India", "USA", "China", "Russia"],
+        answer: "China"
     },
     {
-        question: "Which language is used for web development?",
-        options: ["Python", "HTML", "Java", "C++"],
-        answer: "HTML"
-    },
-    {
-        question: "Who wrote 'Hamlet'?",
-        options: ["Charles Dickens", "William Shakespeare", "Mark Twain", "Jane Austen"],
-        answer: "William Shakespeare"
-    },
-    {
-        question: "What is the largest planet in our solar system?",
-        options: ["Earth", "Mars", "Jupiter", "Saturn"],
-        answer: "Jupiter"
-    },
-    {
-        question: "Which country is known as the Land of the Rising Sun?",
-        options: ["China", "Japan", "South Korea", "India"],
-        answer: "Japan"
+        topic: "Technology",
+        question: "Why are NVIDIA chips popular in AI?",
+        options: [
+            "Cheap price",
+            "Fast processing",
+            "Good cameras",
+            "Long battery"
+        ],
+        answer: "Fast processing"
     }
+    ,
+    {
+        topic: "Web Development",
+        question: "Why is React popular for building user interfaces?",
+        options: [
+            "Fast updates",
+            "Easy animations",
+            "Built-in database",
+            "No JavaScript"
+        ],
+        answer: "Fast updates"
+    },
+    {
+        topic: "Programming",
+        question: "Which language is mainly used for web page styling?",
+        options: ["HTML", "JavaScript", "CSS", "Python"],
+        answer: "CSS"
+    },
+    {
+        topic: "Space",
+        question: "Which planet is known as the Red Planet?",
+        options: ["Earth", "Mars", "Venus", "Jupiter"],
+        answer: "Mars"
+    },
+    {
+        topic: "General Knowledge",
+        question: "How many days are there in a leap year?",
+        options: ["365", "366", "364", "360"],
+        answer: "366"
+    },
+    {
+        topic: "Internet",
+        question: "Which company owns Instagram?",
+        options: ["Google", "Microsoft", "Meta", "Apple"],
+        answer: "Meta"
+    },
+    {
+        topic: "Nature",
+        question: "Which is the only bird that can fly backwards?",
+        options: ["Hummingbird", "Parrot", "Eagle", "Woodpecker"],
+        answer: "Hummingbird"
+    },
+    {
+        topic: "Animal Kingdom",
+        question: "How many hearts does an octopus have?",
+        options: ["One", "Two", "Three", "Eight"],
+        answer: "Three"
+    },
+    {
+        topic: "Technology",
+        question: "What was the first product ever sold on Amazon?",
+        options: ["Books", "Software", "CDs", "Electronics"],
+        answer: "Books"
+    },
+
 ];
+
 
 //Welcome Screen
 const welcomeScreen = document.querySelector('.welcome-screen');
@@ -41,15 +89,15 @@ if (storedName) {
 }
 
 startBtn.onclick = () => {
-welcomeScreen.style.display = "none";
-resultScreen.style.display = "none";
-quizContainer.style.display = "block";
+    welcomeScreen.style.display = "none";
+    resultScreen.style.display = "none";
+    quizContainer.style.display = "block";
 
-   currentQuestion = 0;
+    currentQuestion = 0;
     timeLeft = 20;
     score = 0;
 
-    loadQuestion();  
+    loadQuestion();
 
 };
 
@@ -74,7 +122,7 @@ let quizOptionBox = document.querySelector('.options');
 let quizResult = document.querySelector('.result');
 let QuizScore = document.getElementById('score');
 let restartBtn = document.querySelector('.restart-btn');
-
+let TopicName = document.querySelector("#topic-name")
 
 function loadQuestion() {
 
@@ -95,6 +143,7 @@ function loadQuestion() {
     startTimer();
 
     let currentQuizData = quizData[currentQuestion];
+    TopicName.textContent = currentQuizData.topic;
     quizQuestion.textContent = currentQuizData.question;
     quizOptionBox.textContent = "";
 
@@ -155,16 +204,16 @@ function endGame() {
     QuizScore.textContent = score;
     timerwhole.style.display = "none";
     submitBtn.style.display = "none";
-    
+
     quizResult.style.display = "block";
     restartBtn.style.display = "block";
     resultScreen.style.display = "block";
-    
+
     quizContainer.style.display = "none";
-    resultScreen.style.display = "block";   
-    
+    resultScreen.style.display = "block";
+
     document.getElementById("score").textContent = score;
-    
+
 }
 
 restartBtn.addEventListener("click", () => {
@@ -177,7 +226,7 @@ restartBtn.addEventListener("click", () => {
     quizOptionBox.style.display = "block";
     quizResult.style.display = "none";
     restartBtn.style.display = "none";
-    
+
     quizContainer.style.display = "block";
     timerwhole.style.display = "block";
     submitBtn.style.display = "block";
@@ -187,5 +236,5 @@ restartBtn.addEventListener("click", () => {
     loadQuestion();
 
 });
-loadQuestion();
+
 

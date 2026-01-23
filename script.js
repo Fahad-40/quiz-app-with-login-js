@@ -15,7 +15,7 @@ function signUp() {
     msgArea.innerText = "Account created! Redirecting to logIn... ";
 
     setTimeout(() => {
-        window.location.href = "logIn.html";
+        window.location.href = "index.html";
     }, 1500);
 }
 
@@ -36,7 +36,7 @@ function logIn() {
     }
 }
 function logOut() {
-    window.location.href = "logIn.html";
+    window.location.href = "index.html";
     localStorage.setItem("isloggedIn" , false);
 }
 
